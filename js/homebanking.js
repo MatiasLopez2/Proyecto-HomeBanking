@@ -1,5 +1,5 @@
 //Declaración de variables
-var nombreUsuario="Matias Lopez";
+var nombreUsuario="";
 var saldoCuenta=22000;
 var limiteExtraccion=10000;
 var limiteMaxExtraccion=40000;
@@ -8,7 +8,7 @@ var telefono=425;
 var luz=210;
 var internet=570;
 var cuentaAmigas=[1111,2222];
-var codigoSeguridad=1234;
+var codigoSeguridad="";
 
 //Ejecución de las funciones que actualizan los valores de las variables en el HTML.
 window.onload = function() {
@@ -218,7 +218,7 @@ function iniciarSesion() {
         if((verificacionUsuario) && (verificacionUsuario==nombreUsuario)){
         var codigoString=prompt("Ingrese su clave: ");
         var codigo=parseInt(codigoString);
-        if(codigo===codigoSeguridad){
+        if(codigo==""){
             alert("Bienvenido/a "+nombreUsuario+", ya puedes comenzar a realizar operaciones.");
         }
         else{
